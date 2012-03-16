@@ -1,8 +1,5 @@
-<%@ page import="javax.naming.Binding" %>
-<%@ page import="javax.naming.Context" %>
-<%@ page import="javax.naming.NamingEnumeration" %>
-<%@ page import="javax.naming.NamingException" %>
 <%@ page import="java.io.IOException" %>
+<%@ page import="javax.naming.*" %>
 <HTML>
 <HEAD>
     <TITLE>Jndi context</TITLE>
@@ -36,7 +33,10 @@
 <p>
 <ul>
     <%
-        listContext(new javax.naming.InitialContext(), "  ", out);
+        InitialContext ctx = new InitialContext();
+        listContext(ctx, "  ", out);
+        Object lookup = ctx.lookup("java:comp/env/envPropertiePath");
+        out.println(lookup.toString());
     %>
 </ul>
 </p>

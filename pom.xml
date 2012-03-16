@@ -100,6 +100,8 @@
                     <stopPort>8191</stopPort>
                     <!-- server config -->
                     <jettyXml>${basedir}/src/dev/jetty-config.xml</jettyXml>
+                    <!-- app specific config -->
+                    <contextXml>${basedir}/src/dev/jetty-xweb.xml</contextXml>
                 </configuration>
                 <dependencies>
                     <dependency>
