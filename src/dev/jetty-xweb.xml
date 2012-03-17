@@ -4,7 +4,7 @@
 <Configure id="xweb" class="org.eclipse.jetty.webapp.WebAppContext">
     <New id="envPropertiePath" class="org.eclipse.jetty.plus.jndi.EnvEntry">
         <Arg>envPropertiePath</Arg>
-        <Arg type="java.lang.String">file:///Users/jean/dev/jdev/src/work/art_externalize_conf/xweb/src/main/resources/env.properties</Arg>
+        <Arg type="java.lang.String">/Users/jean/dev/jdev/src/work/art_externalize_conf/xweb/src/main/resources/env.properties</Arg>
         <Arg type="boolean">true</Arg>
     </New>
 </Configure>
